@@ -1,1 +1,468 @@
 /* You can add global styles to this file, and also import other style files */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+
+}
+
+:root {
+  --main-color:white;
+  --bg-color:#3a3d40;
+  --azulcito:#508AD3;
+  --bg-dark:#212529;
+  }
+
+
+* {
+  font-family: 'Prompt', sans-serif !important;
+ }
+
+  /*navbar*/
+div button  {
+  margin:5px;
+
+}
+section a{
+  text-decoration: none;
+  color: var(--azulcito);
+}
+.btn-redes {
+
+border-radius: 50%;
+font-size: 25px;
+
+}
+
+.btn-login {
+  padding: 10px 50px;
+  border-radius: 30px;
+  font-weight: 900;
+}
+
+.btn-login, .btn-redes {
+  background-color:var(--bg-dark);
+  color: var(--main-color);
+  border-color:transparent;
+}
+.btn-login:hover,.btn-redes:hover{
+  -webkit-box-shadow: 0px 0px 7px 2px var(--azulcito);
+  box-shadow: 0px 0px 7px 2px var(--main-color);
+}
+
+.btn-login:hover,.btn-redes:hover,.nav-item:hover  {
+  text-shadow: 0px 0px 9px var(--azulcito);
+  transform: scale(1.1);
+}
+
+.nav-item {
+font-size: 15px;
+font-weight: bold;
+}
+/*fin navbar*/
+
+.bg {
+  text-align: center;
+  padding:10px;
+  height: 100vh;
+  background-size: cover;
+  box-sizing: border-box;
+  filter: blur(2px);
+
+}
+
+.home {
+  background-image: url(assets/img/banner1.jpg);
+
+}
+
+div h1 {
+  color:var(--main-color);
+  font-weight: bold;
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 9px var(--azulcito);
+
+/*animacion de tipeo */
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 31ch;
+
+  animation: typing 4s steps(31),
+  blink .4s infinite step-end alternate;
+
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% {border-color: transparent}
+}
+
+.degradado-gris {
+  background-color: var(--bg-color);
+  background-image: linear-gradient(62deg, var(--bg-color) 0%, #181719 100%);
+}
+
+.escala-seccion {
+  width: 100%;
+  height: 100vh;
+}
+
+/*Sección Sobre mi*/
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.perfil {
+  width: 50%;
+  position: relative;
+  left: 100px;
+}
+
+
+.tarjeta {
+  display: flex;
+  align-items: left;
+  justify-content:flex-start;
+  flex-direction: column;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.titulo {
+  margin-bottom: 0 auto;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+
+.fsdeveloper {
+  text-shadow: 0px 0px 9px var(--azulcito);
+  font-style:italic;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+/*Fin Sección Sobre Mi*/
+
+/*Sección educación*/
+.educacion-section {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  display: inline-block;
+}
+
+
+.container-timeline {
+  position: relative;
+}
+
+.container__line {
+  border-right: 2px solid var(--bg-color);
+  left: 16px;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+
+}
+.container__line-white {
+  border-right: 2px solid var(--main-color);
+  left: 16px;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+
+}
+
+.container__items {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container__item {
+  margin-bottom: 8px;
+}
+
+.container__top {
+  align-items: center;
+  display: flex;
+}
+
+.container__circle {
+  background-color: var(--bg-dark);
+  border-radius: 9999px;
+  height: 32px;
+  width: 32px;
+}
+.container__circle-white {
+  background-color: var(--main-color);
+  border-radius: 9999px;
+  height: 32px;
+  width: 32px;
+}
+
+
+.container__title {
+  flex: 1;
+}
+
+.container__desc {
+  margin-left: 48px;
+}
+
+.img-logos {
+  width: 250px !important;
+  height:  120px !important;
+
+}
+/* Fin Sección educación*/
+
+/*Sección experiencia*/
+
+.experience-section {
+  color: var(--main-color);
+}
+
+/*Sección proyectos*/
+.projects-section {
+  align-items: center;
+    background-image: linear-gradient(0deg, var(--bg-dark) 0%, var(--bg-dark) 50%, #ffffff 50%, #ffffff 100%);
+    display: inline-block;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.caja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+}
+
+.caja .card-py {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    height: 240px;
+    justify-content: center;
+    margin: 2rem 10px;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: background-color 0.5s ease,
+                            color 0.5s ease,
+                            transform 0.5s ease;
+    width: 180px;
+}
+
+.caja:hover .card-py,
+.caja:focus .card-py,
+.caja:active .card-py {
+    transform: perspective(500px) rotateY(30deg);
+}
+
+.caja .card-py:hover,
+.caja .card-py:focus,
+.caja .card-py:active {
+    transform: perspective(500px) rotateY(0);
+}
+
+.caja .card-py:hover ~ .card-py,
+.caja .card-py:focus ~ .card-py,
+.caja .card-py:active ~ .card-py {
+    transform: perspective(500px) rotateY(-30deg);
+}
+
+.caja .card-py h2 {
+    background-color: var(--bg-dark);
+    border-radius: 50%;
+    color: var(--main-color);
+    font-size: 3rem;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    transition: box-shadow 0.5s ease;
+    width: 80px;
+}
+
+.caja .card-py:hover h2,
+.caja .card-py:focus h2,
+.caja .card-py:active h2 {
+    background-color: var(--main-color);
+    box-shadow: 0 0 0 150px var(--bg-dark);
+    color: var(--bg-dark);
+}
+
+/*Fin sección proyectos*/
+
+/*Sección Skills*/
+
+.skills-section {
+  display: inline !important;
+}
+
+.progress-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px
+}
+
+.progress {
+  height: 20px;
+  background: #333;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 30px;
+  overflow: visible
+}
+
+
+
+.progress .progress-bar {
+  position: relative;
+  -webkit-animation: animate-positive 2s;
+  animation: animate-positive 2s
+}
+
+.progress .progress-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  position: absolute;
+  top: -30px;
+  right: -25px
+}
+
+.progress .progress-bar:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  background: #fff;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  right: -5px;
+  z-index: 1;
+  transform: rotate(35deg)
+}
+/*Fin sección skills*/
+
+/* footer y contacto*/
+footer {
+  padding:20px 0;
+  color:var(--main-color);
+  margin-top:40px;
+  text-align: center;
+  background-color: var(--bg-dark);
+}
+
+footer a {
+  text-decoration: none;
+}
+
+
+.form {
+  width: 340px;
+  height: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+input:focus {
+  border-bottom: 2px solid #78788c;
+}
+form input, form textarea:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+form button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+form button:hover {
+  background: #78788c;
+  color: #fff;
+}
+
+textarea {
+  resize: none !important;
+  overflow: hidden;
+}
+
+
+
